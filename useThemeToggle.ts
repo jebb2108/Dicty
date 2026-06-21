@@ -1,24 +1,19 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 const useThemeToggle = () => {
-  const [theme, setTheme] = useState('light');
+    useEffect(() => {
+        const theme = localStorage.getItem('theme') || 'light';
+        document.body.setAttribute('data-theme', theme);
+    }, []);
 
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      setTheme(savedTheme);
-      document.documentElement.setAttribute('data-theme', savedTheme);
-    }
-  }, []);
+    const toggleTheme = () => {
+        let currentTheme = localStorage.getItem('theme');
+        currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        localStorage.setItem('theme', currentTheme);
+        document.body.setAttribute('data-theme', currentTheme);
+    };
 
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
-    document.documentElement.setAttribute('data-theme', newTheme);
-  };
-
-  return [theme, toggleTheme];
+    return { toggleTheme };
 };
 
 export default useThemeToggle;

@@ -1,0 +1,26 @@
+/* Global CSS Variables for Light and Dark Themes */
+:root {
+    --ion-color-primary: #3880ff;
+    --ion-color-secondary: #3dc2ff;
+    --ion-color-tertiary: #7044ff;
+    --ion-color-success: #10dc60;
+    --ion-color-warning: #ffce00;
+    --ion-color-danger: #f04141;
+    --ion-color-dark: #222428;
+    --ion-color-light: #f4f5f8;
+    /* Add your css variables */
+}
+
+/* Dark theme styles */
+[data-theme='dark'] {
+    --ion-color-primary: #1e1e1e;
+    --ion-color-secondary: #007acc;
+    --ion-color-tertiary: #3f51b5;
+    --ion-color-success: #03dac5;
+    --ion-color-warning: #ffca28;
+    --ion-color-danger: #f44336;
+    --ion-color-dark: #ffffff;
+    --ion-color-light: #000000;
+}
+
+/* Add more dark theme styles as needed */
