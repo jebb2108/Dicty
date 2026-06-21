@@ -1,0 +1,6 @@
+{
+  "appId": "site.lllang.dictmobile",
+  "appName": "LLLang Dictionary",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}

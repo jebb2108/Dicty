@@ -1,0 +1,47 @@
+:root {
+  --color-danger: #a64c36;
+  --color-fern: #355f3a;
+  --color-fern-soft: #698467;
+  --color-ink: #2e2b24;
+  --color-muted: #7f776b;
+  --paper-shadow: 0 18px 44px rgba(79, 81, 63, 0.12);
+  --paper-stroke: rgba(119, 130, 98, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root,
+ion-app,
+.ion-page {
+  width: 100%;
+  min-height: 100%;
+}
+
+html {
+  background: #f4ecda;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--color-ink);
+  background:
+    radial-gradient(circle at top, rgba(219, 233, 207, 0.7), transparent 28%),
+    linear-gradient(180deg, #f8f3e7 0%, #efe5d0 100%);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
