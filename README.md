@@ -1,2 +1,2 @@
-# mobile-app
-Ionic React app - mobile-app
+# Dicty
+Ionic React app - Dicty
