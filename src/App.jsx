@@ -1,15 +1,22 @@
-import { BrowserRouter } from 'react-router-dom';
-import { AppRoutes } from './app/AppRoutes';
-import { useDictionaryApp } from './shared/hooks/useDictionaryApp';
-import './styles/app.scss';
+import React from 'react';
+import { IonApp } from '@ionic/react';
+import AppRouter from './Router';
+import { IonHeader, IonContent, IonFooter } from '@ionic/react';
 
-export default function App() {
-  const appState = useDictionaryApp();
-
+const App: React.FC = () => {
   return (
-    <BrowserRouter>
-      <AppRoutes {...appState} />
-    </BrowserRouter>
+    <IonApp>
+      <IonHeader>
+        <h1>Dicty App</h1>
+      </IonHeader>
+      <IonContent>
+        <AppRouter />
+      </IonContent>
+      <IonFooter>
+        <p>&copy; 2023 Dicty App</p>
+      </IonFooter>
+    </IonApp>
   );
-}
-// CrewAI run at Sun Jun 21 17:11:05 UTC 2026
+};
+
+export default App;
